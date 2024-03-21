@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Noor - Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1d1f27;
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/20/09/06/abstract-1848519_960_720.png');
+            background-repeat: repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .skills-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        .skill {
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            animation: fadeInUp 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 0.1s both, hoverPulse 2s infinite;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .web {
+            background-color: #3498db;
+        }
+        .python {
+            background-color: #e74c3c;
+        }
+        .business {
+            background-color: #27ae60;
+        }
+        .app {
+            background-color: #f39c12;
+        }
+        .student {
+            background-color: #9b59b6;
+        }
+        .skill-icon {
+            font-size: 36px;
+            margin-right: 20px;
+        }
+        .skill-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .skill-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .skill-description {
+            font-size: 16px;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes hoverPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="skills-container">
+        <div class="skill web">
+            <div class="skill-icon">🌐</div>
+            <div class="skill-content">
+                <div class="skill-name">Web Developer</div>
+                <div class="skill-description">Crafting interactive websites</div>
+            </div>
+        </div>
+        <div class="skill python">
+            <div class="skill-icon">🐍</div>
+            <div class="skill-content">
+                <div class="skill-name">Python Expert</div>
+                <div class="skill-description">Coding with elegance</div>
+            </div>
+        </div>
+        <div class="skill business">
+            <div class="skill-icon">💼</div>
+            <div class="skill-content">
+                <div class="skill-name">Businessman</div>
+                <div class="skill-description">Entrepreneurial drive</div>
+            </div>
+        </div>
+        <div class="skill app">
+            <div class="skill-icon">📱</div>
+            <div class="skill-content">
+                <div class="skill-name">App Developer</div>
+                <div class="skill-description">Creating innovative apps</div>
+            </div>
+        </div>
+        <div class="skill student">
+            <div class="skill-icon">📚</div>
+            <div class="skill-content">
+                <div class="skill-name">Student</div>
+                <div class="skill-description">Lifelong learner</div>
+            </div>
+        </div>
+    </div>
+    <button class="add-button" id="backButton">Back</button>
+
+    <!-- JavaScript to handle the back button -->
+    <script>
+        document.getElementById("backButton").addEventListener("click", function() {
+            window.history.back();
+        });
+    </script>
+	<script>
+
+</body>
+</html>

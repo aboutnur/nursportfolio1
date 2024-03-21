@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html larset="UTF-8">ang="en">
+<head>
+    <meta ch
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<a href ='#' class ="logo">Portfolio</a>
+    <title>Hire Me</title>
+    <link href= "D:\html ,css, java practise\practice\portfolio\hire me css.css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="hire-me-section">
+        <h2>Ready to Hire Me?</h2>
+        <p>If you're interested in working together, please fill out the form below:</p>
+        <form id="hire-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit" id="hire-button">Send Message</button>
+        </form>
+    </section>
+
+<!-- Add this script at the end of the HTML body -->
+<script>
+    document.getElementById("hire-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from actually submitting
+
+        // Get the form data
+        const formData = new FormData(event.target);
+        const name = formData.get("name");
+
+        // Create and display a custom thank-you message
+        const thankYouMessage = document.createElement("div");
+        thankYouMessage.classList.add("thank-you-message");
+        thankYouMessage.innerHTML = `
+            <h3>Thank you, ${name}!</h3>
+            <p>Your message has been received. I'll get back to you soon.</p>
+        `;
+
+        const formSection = document.querySelector(".hire-me-section");
+        formSection.style.display = "none"; // Hide the form
+        formSection.parentNode.insertBefore(thankYouMessage, formSection.nextSibling); // Insert the thank-you message after the form
+    });
+</script>
+
+ <style>
+        /* ... (your existing CSS styles) ... */
+        .add-button {
+            /* ... (your button styles) ... */
+        }
+        .add-button:hover {
+            /* ... (your button styles on hover) ... */
+        }
+    </style>
+</head>
+<body>
+    <div class="skills-container">
+        <!-- ... (your skill sections) ... -->
+    </div>
+    <button class="add-button" id="backButton">Back</button>
+
+    <!-- Add a script to handle the back button -->
+    <script>
+        // Listen for the button click
+        document.getElementById("backButton").addEventListener("click", function() {
+            // Use the browser's history object to go back
+            window.history.back();
+        });
+    </script>
+
+</body>
+</html>

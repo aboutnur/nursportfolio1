@@ -1,0 +1,124 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Remove the background color to allow the background image to show through */
+    /* background-color: #f7f7f7; */
+	
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about-section {
+    /* Remove the background color to allow the background image to show through */
+    /* background-color: #ffffff; */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section img {
+    max-width: 50%;
+    border-radius: 50%;
+    animation: slideRight 2s ease-in-out;
+}
+.about-section img {
+    max-width: 50%;
+    border-radius: 50%;
+    animation: slideRight 2s ease-in-out;
+    float: right; /* Move the image to the right */
+    opacity: 0.8; /* Set the image opacity to make it transparent */
+}
+
+.about-section h2 {
+    color: #fff; /* Change the name color to white */
+    font-size: 28px;
+    margin-top: 10px;
+    opacity: 100;
+    animation: slideRight 8s ease-in-out;
+}
+
+.about-section p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 100;
+    animation: slideRight 2s ease-in-out;
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+    opacity: 100;
+    animation: slideRight 0.8s ease-in-out;
+}
+
+#show-more-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, scale 0.2s ease-in-out;
+    animation: slideLeft 0.8s ease-in-out;
+}
+
+#show-more-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Slide-right animation */
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide-left animation */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Center-align the name */
+.name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Customize the name's color */
+#name {
+    color: #0ef; /* Change the name color to white */
+}

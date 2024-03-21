@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f242d;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .contact-form {
+            background-color: #2c3242;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #f39c12;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #1f242d;
+            color: white;
+            width: 100%;
+        }
+        textarea {
+            height: 100px;
+        }
+        .submit-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #2980b9;
+        }
+        .privacy-notice {
+            font-size: 12px;
+            color: #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h1>Contact Me</h1>
+        <form id="contactForm" action="process_form_contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="total">What is 5 + 2?</label>
+                <input type="number" id="total" name="total" required>
+            </div>
+            <div class="form-group">
+                <label for="privacy">Privacy</label>
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy" style="font-size: 12px;">I agree to the privacy policy.</label>
+            </div>
+            <button type="submit" class="submit-button">Submit Contact Form</button>
+        </form>
+    </div>
+	<div class="skills-container">
+        <!-- ... (your skill sections) ... -->
+    </div>
+    <button class="add-button" id="backButton">Back</button>
+
+    <!-- Add a script to handle the back button -->
+    <script>
+        // Listen for the button click
+        document.getElementById("backButton").addEventListener("click", function() {
+            // Use the browser's history object to go back
+            window.history.back();
+        });
+    </script>
+</body>
+</html>
